@@ -11,9 +11,9 @@ import pl.mariusz.marciniak.operations.logic.AsyncOperationLogic;
 
 @Aspect
 @Component
-public class ReleaseLockAspect {
+public class ReleaseResourcesAspect {
 
-    private Logger             logger = LogManager.getLogger(ReleaseLockAspect.class);
+    private Logger             logger = LogManager.getLogger(ReleaseResourcesAspect.class);
 
     @After("execution(* pl.mariusz.marciniak.operations.logic.AsyncOperationLogic.executeOperation(pl.mariusz.marciniak.operations.data.OperationData))")
     private void release(JoinPoint jp) {
